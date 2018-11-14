@@ -37,6 +37,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.showDataGridView = new System.Windows.Forms.DataGridView();
+            this.takeSearchItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.PdfButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.snoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,8 +47,6 @@
             this.categoryNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reorderLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.takeSearchItemBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.PdfButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.takeSearchItemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showDataGridView)).BeginInit();
@@ -135,6 +136,31 @@
             this.showDataGridView.Size = new System.Drawing.Size(653, 195);
             this.showDataGridView.TabIndex = 11;
             // 
+            // takeSearchItemBindingSource1
+            // 
+            this.takeSearchItemBindingSource1.DataSource = typeof(StockManagementSystem.Model.TakeSearchItem);
+            // 
+            // PdfButton
+            // 
+            this.PdfButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PdfButton.Location = new System.Drawing.Point(609, 443);
+            this.PdfButton.Name = "PdfButton";
+            this.PdfButton.Size = new System.Drawing.Size(126, 37);
+            this.PdfButton.TabIndex = 10;
+            this.PdfButton.Text = "Create PDF";
+            this.PdfButton.UseVisualStyleBackColor = true;
+            this.PdfButton.Click += new System.EventHandler(this.PdfButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(335, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 24);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Search Item";
+            // 
             // snoDataGridViewTextBoxColumn
             // 
             this.snoDataGridViewTextBoxColumn.DataPropertyName = "Sno";
@@ -168,7 +194,7 @@
             // quantityDataGridViewTextBoxColumn
             // 
             this.quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Availabe Quantity";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
             // 
             // reorderLevelDataGridViewTextBoxColumn
@@ -177,27 +203,13 @@
             this.reorderLevelDataGridViewTextBoxColumn.HeaderText = "ReorderLevel";
             this.reorderLevelDataGridViewTextBoxColumn.Name = "reorderLevelDataGridViewTextBoxColumn";
             // 
-            // takeSearchItemBindingSource1
-            // 
-            this.takeSearchItemBindingSource1.DataSource = typeof(StockManagementSystem.Model.TakeSearchItem);
-            // 
-            // PdfButton
-            // 
-            this.PdfButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PdfButton.Location = new System.Drawing.Point(609, 443);
-            this.PdfButton.Name = "PdfButton";
-            this.PdfButton.Size = new System.Drawing.Size(126, 37);
-            this.PdfButton.TabIndex = 10;
-            this.PdfButton.Text = "Create PDF";
-            this.PdfButton.UseVisualStyleBackColor = true;
-            this.PdfButton.Click += new System.EventHandler(this.PdfButton_Click);
-            // 
             // SearchItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ClientSize = new System.Drawing.Size(783, 508);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.showDataGridView);
             this.Controls.Add(this.PdfButton);
             this.Controls.Add(this.SearchButton);
@@ -227,6 +239,8 @@
         private System.Windows.Forms.BindingSource takeSearchItemBindingSource;
         private System.Windows.Forms.DataGridView showDataGridView;
         private System.Windows.Forms.BindingSource takeSearchItemBindingSource1;
+        private System.Windows.Forms.Button PdfButton;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn snoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
@@ -234,6 +248,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn reorderLevelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button PdfButton;
     }
 }

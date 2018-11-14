@@ -133,7 +133,7 @@ namespace StockManagementSystem
             {
                 if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
-                    
+                  updateId = Convert.ToInt32(showCategoryGridView.Rows[e.RowIndex].Cells[1].Value);
                     int isSaved = categoryManage.DeleteCategory(updateId);
                     if (isSaved > 0)
                     {

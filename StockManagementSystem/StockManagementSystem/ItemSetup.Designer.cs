@@ -40,8 +40,11 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.reorderLevelTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -146,12 +149,28 @@
             this.reorderLevelTextBox.Text = "0";
             this.reorderLevelTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.reorderLevelTextBox_KeyPress);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(284, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(180, 24);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Please Item SetUp";
+            // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(StockManagementSystem.Model.Item);
+            // 
             // ItemSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(704, 480);
+            this.ClientSize = new System.Drawing.Size(704, 341);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.reorderLevelTextBox);
             this.Controls.Add(this.itemNameTextBox);
             this.Controls.Add(this.SaveButton);
@@ -165,6 +184,7 @@
             this.Text = "ItemSetup";
             ((System.ComponentModel.ISupportInitialize)(this.categoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +203,7 @@
         private System.Windows.Forms.TextBox reorderLevelTextBox;
         private System.Windows.Forms.BindingSource categoryBindingSource;
         private System.Windows.Forms.BindingSource companyBindingSource;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.BindingSource itemBindingSource;
     }
 }

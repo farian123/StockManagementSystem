@@ -135,7 +135,7 @@ namespace StockManagementSystem
             {
                 if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
-
+                    updateId = Convert.ToInt32(showCompanyGridView.Rows[e.RowIndex].Cells[1].Value);
                     int isSaved = companyManage.DeleteCompany(updateId);
                     if (isSaved > 0)
                     {

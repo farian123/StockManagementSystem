@@ -42,6 +42,7 @@
             this.availabeQuantityTextBox = new System.Windows.Forms.TextBox();
             this.stockInQuantityTextBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -167,12 +168,23 @@
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(243, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(233, 24);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Stock In As your Choice";
+            // 
             // StockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(710, 470);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.stockInQuantityTextBox);
             this.Controls.Add(this.availabeQuantityTextBox);
@@ -208,5 +220,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.BindingSource companyBindingSource;
         private System.Windows.Forms.BindingSource itemBindingSource;
+        private System.Windows.Forms.Label label6;
     }
 }

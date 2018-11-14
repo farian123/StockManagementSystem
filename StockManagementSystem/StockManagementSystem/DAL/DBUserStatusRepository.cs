@@ -11,7 +11,7 @@ namespace StockManagementSystem.DAL
 
     public class DBUserStatusRepository
     {
-        static string conString = "Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
+        static string conString = @"Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
         SqlConnection con = new SqlConnection(conString);
 
 

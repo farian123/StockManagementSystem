@@ -10,7 +10,7 @@ namespace StockManagementSystem.DAL
 {
     public class DBStockInRepository
     {
-        static string conString = "Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
+        static string conString = @"Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
         SqlConnection con = new SqlConnection(conString);
         internal System.Data.DataTable ItemOrCompanyValue(string query)
         {

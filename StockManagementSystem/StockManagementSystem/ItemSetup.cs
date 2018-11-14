@@ -79,7 +79,7 @@ namespace StockManagementSystem
             }
             else
             {
-                MessageBox.Show("Must be fill Item Box");
+                MessageBox.Show("Must fill Item");
             }
         }
 

@@ -40,6 +40,7 @@
             this.sellQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchItemByDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PdfButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.showGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchItemByDateBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -140,12 +141,23 @@
             this.PdfButton.UseVisualStyleBackColor = true;
             this.PdfButton.Click += new System.EventHandler(this.PdfButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(284, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Search Item By Date";
+            // 
             // SearchByDate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(749, 495);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.showGridView);
             this.Controls.Add(this.PdfButton);
             this.Controls.Add(this.SearchButton);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sellQuantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource searchItemByDateBindingSource;
         private System.Windows.Forms.Button PdfButton;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -37,6 +37,7 @@
             this.searchItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchByDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userModifyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,16 +123,27 @@
             this.userModifyToolStripMenuItem.Text = "User Modify";
             this.userModifyToolStripMenuItem.Click += new System.EventHandler(this.userModifyToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 279);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(629, 37);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome To Stock Management System";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1118, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.Text = "Home";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Home_FormClosed);
@@ -153,5 +165,6 @@
         private System.Windows.Forms.ToolStripMenuItem searchItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchByDateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem userModifyToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -15,7 +15,7 @@ namespace StockManagementSystem.DLL
 
         internal DataTable CheckDuplecateItem(StockOutItem item)
         {
-            string query = @"SELECT * FROM tblItem WHERE Id='" + item.ItemId + "' AND ReorderLevel<='"+item.TotalQuantity+"'";
+            string query = @"SELECT * FROM tblItem WHERE Id='" + item.ItemId + "' AND Quantity>='"+item.TotalQuantity+"'";
             DataTable dt = _dbStockOutRepository.CheckAll(query);
            return dt;
         }

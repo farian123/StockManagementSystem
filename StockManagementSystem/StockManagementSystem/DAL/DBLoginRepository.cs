@@ -12,8 +12,8 @@ namespace StockManagementSystem.DAL
     public class DBLoginRepository
     {
 
-        static string conString = "Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
-        SqlConnection con = new SqlConnection(conString);
+      static string conString = @"Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
+      SqlConnection con = new SqlConnection(conString);
 
 
         internal System.Data.DataTable CheckDataFound(string query)

@@ -30,6 +30,7 @@
         {
             this.userInformationGridView = new System.Windows.Forms.DataGridView();
             this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.userInformationGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,17 +52,29 @@
             this.Sno.HeaderText = "Sno";
             this.Sno.Name = "Sno";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(203, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Updated System By User";
+            // 
             // UserInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(644, 356);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.userInformationGridView);
             this.Name = "UserInformation";
             this.Text = "UserInformation";
             ((System.ComponentModel.ISupportInitialize)(this.userInformationGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -69,5 +82,6 @@
 
         private System.Windows.Forms.DataGridView userInformationGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sno;
+        private System.Windows.Forms.Label label3;
     }
 }

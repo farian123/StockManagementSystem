@@ -11,7 +11,7 @@ namespace StockManagementSystem.DAL
 
     public class DBStockOutRepository
     {
-        static string conString = "Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
+        static string conString = @"Server=FARIAN-PC; Database=StockManagement; Integrated Security=true";
         SqlConnection con = new SqlConnection(conString);
 
         internal int Saved(string query)

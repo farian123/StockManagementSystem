@@ -43,10 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.addItemDataGridView = new System.Windows.Forms.DataGridView();
-            this.stockOutItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SellButton = new System.Windows.Forms.Button();
-            this.DamageButton = new System.Windows.Forms.Button();
-            this.LostButton = new System.Windows.Forms.Button();
             this.Sno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.companyIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +50,11 @@
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteButton = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.stockOutItemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SellButton = new System.Windows.Forms.Button();
+            this.DamageButton = new System.Windows.Forms.Button();
+            this.LostButton = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addItemDataGridView)).BeginInit();
@@ -204,43 +205,6 @@
             this.addItemDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.addItemDataGridView_CellContentClick);
             this.addItemDataGridView.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.addItemDataGridView_RowPostPaint);
             // 
-            // stockOutItemBindingSource
-            // 
-            this.stockOutItemBindingSource.DataSource = typeof(StockManagementSystem.Model.StockOutItem);
-            // 
-            // SellButton
-            // 
-            this.SellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SellButton.Location = new System.Drawing.Point(333, 477);
-            this.SellButton.Name = "SellButton";
-            this.SellButton.Size = new System.Drawing.Size(75, 42);
-            this.SellButton.TabIndex = 16;
-            this.SellButton.Text = "Sell";
-            this.SellButton.UseVisualStyleBackColor = true;
-            this.SellButton.Click += new System.EventHandler(this.SellButton_Click);
-            // 
-            // DamageButton
-            // 
-            this.DamageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DamageButton.Location = new System.Drawing.Point(445, 477);
-            this.DamageButton.Name = "DamageButton";
-            this.DamageButton.Size = new System.Drawing.Size(88, 42);
-            this.DamageButton.TabIndex = 16;
-            this.DamageButton.Text = "Damage";
-            this.DamageButton.UseVisualStyleBackColor = true;
-            this.DamageButton.Click += new System.EventHandler(this.DamageButton_Click);
-            // 
-            // LostButton
-            // 
-            this.LostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LostButton.Location = new System.Drawing.Point(577, 477);
-            this.LostButton.Name = "LostButton";
-            this.LostButton.Size = new System.Drawing.Size(75, 42);
-            this.LostButton.TabIndex = 16;
-            this.LostButton.Text = "Lost";
-            this.LostButton.UseVisualStyleBackColor = true;
-            this.LostButton.Click += new System.EventHandler(this.LostButton_Click);
-            // 
             // Sno
             // 
             this.Sno.FillWeight = 20F;
@@ -285,12 +249,60 @@
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.UseColumnTextForButtonValue = true;
             // 
+            // stockOutItemBindingSource
+            // 
+            this.stockOutItemBindingSource.DataSource = typeof(StockManagementSystem.Model.StockOutItem);
+            // 
+            // SellButton
+            // 
+            this.SellButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SellButton.Location = new System.Drawing.Point(333, 477);
+            this.SellButton.Name = "SellButton";
+            this.SellButton.Size = new System.Drawing.Size(75, 42);
+            this.SellButton.TabIndex = 16;
+            this.SellButton.Text = "Sell";
+            this.SellButton.UseVisualStyleBackColor = true;
+            this.SellButton.Click += new System.EventHandler(this.SellButton_Click);
+            // 
+            // DamageButton
+            // 
+            this.DamageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamageButton.Location = new System.Drawing.Point(445, 477);
+            this.DamageButton.Name = "DamageButton";
+            this.DamageButton.Size = new System.Drawing.Size(88, 42);
+            this.DamageButton.TabIndex = 16;
+            this.DamageButton.Text = "Damage";
+            this.DamageButton.UseVisualStyleBackColor = true;
+            this.DamageButton.Click += new System.EventHandler(this.DamageButton_Click);
+            // 
+            // LostButton
+            // 
+            this.LostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LostButton.Location = new System.Drawing.Point(577, 477);
+            this.LostButton.Name = "LostButton";
+            this.LostButton.Size = new System.Drawing.Size(75, 42);
+            this.LostButton.TabIndex = 16;
+            this.LostButton.Text = "Lost";
+            this.LostButton.UseVisualStyleBackColor = true;
+            this.LostButton.Click += new System.EventHandler(this.LostButton_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(248, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(252, 24);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Stock Out As Your Choice";
+            // 
             // StockOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(688, 531);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.LostButton);
             this.Controls.Add(this.DamageButton);
             this.Controls.Add(this.SellButton);
@@ -345,6 +357,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalQuantity;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteButton;
+        private System.Windows.Forms.Label label6;
 
     }
 }

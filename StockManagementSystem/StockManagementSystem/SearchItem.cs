@@ -94,33 +94,42 @@ namespace StockManagementSystem
 
         private void PdfButton_Click(object sender, EventArgs e)
         {
-            Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Text233.pdf", FileMode.Create));
-            doc.Open();
-            Paragraph para = new Paragraph("Search Items By Date");
-            para.IndentationLeft = 244f;
-            doc.Add(para);
-            //doc.Close();
-
-            PdfPTable table = new PdfPTable(showDataGridView.Columns.Count);
-            for (int i = 0; i < showDataGridView.Columns.Count; i++)
+            try
             {
-                table.AddCell(new Phrase(showDataGridView.Columns[i].HeaderText));
-            }
-            table.HeaderRows = 1;
+                Document doc = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+                PdfWriter wri = PdfWriter.GetInstance(doc, new FileStream("Text233.pdf", FileMode.Create));
+                doc.Open();
+                Paragraph para = new Paragraph("Search Items By Date");
+                para.IndentationLeft = 244f;
+                doc.Add(para);
+                //doc.Close();
 
-            for (int i = 0; i < showDataGridView.Rows.Count; i++)
-            {
-                for (int j = 0; j < showDataGridView.Columns.Count; j++)
+                PdfPTable table = new PdfPTable(showDataGridView.Columns.Count);
+                for (int i = 0; i < showDataGridView.Columns.Count; i++)
                 {
-                    if (showDataGridView[j, i].Value != null)
+                    table.AddCell(new Phrase(showDataGridView.Columns[i].HeaderText));
+                }
+                table.HeaderRows = 1;
+
+                for (int i = 0; i < showDataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < showDataGridView.Columns.Count; j++)
                     {
-                        table.AddCell(new Phrase(showDataGridView[j, i].Value.ToString()));
+                        if (showDataGridView[j, i].Value != null)
+                        {
+                            table.AddCell(new Phrase(showDataGridView[j, i].Value.ToString()));
+                        }
                     }
                 }
+                doc.Add(table);
+                doc.Close();
+                MessageBox.Show("PDF Download complete");
             }
-            doc.Add(table);
-            doc.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("DataGridView is null");
+            }
+            
         }
     }
 }
