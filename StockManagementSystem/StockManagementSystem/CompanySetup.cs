@@ -35,7 +35,7 @@ namespace StockManagementSystem
             }
             else
             {
-                MessageBox.Show("Must fill Company");
+                MessageBox.Show("Must have to fill Company");
             }
             UpdateButton2.Visible = false;
         }
@@ -65,12 +65,12 @@ namespace StockManagementSystem
             {
                 addOrUpdate = "Add";
                 UserStatusSave(company);
-                MessageBox.Show("Saved Successfull");
+                MessageBox.Show("Saved Successfully");
                 ShowAllData();
             }
             else
             {
-                MessageBox.Show("Something Wrong into Database");
+                MessageBox.Show("Something Wrong into the Database");
             }
         }
         string addOrUpdate = String.Empty;
@@ -133,7 +133,7 @@ namespace StockManagementSystem
             }
             if (showCompanyGridView.Columns[e.ColumnIndex].Name == "DeleteButton")
             {
-                if (DialogResult.Yes == MessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                if (DialogResult.Yes == MessageBox.Show("Do You Want to Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                 {
                     updateId = Convert.ToInt32(showCompanyGridView.Rows[e.RowIndex].Cells[1].Value);
                     int isSaved = companyManage.DeleteCompany(updateId);
