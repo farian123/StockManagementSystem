@@ -35,7 +35,7 @@ namespace StockManagementSystem
             }
             else
             {
-                MessageBox.Show("Must fill Company");
+                MessageBox.Show("Must be fill Company");
             }
             UpdateButton2.Visible = false;
         }
@@ -49,7 +49,7 @@ namespace StockManagementSystem
             bool check = companyManage.CheckDuplecateCompany(company);
             if (!check)
             {
-                MessageBox.Show("Already Exists This Company");
+                MessageBox.Show("Already Exists This Company in here");
             }
             else
             {
@@ -65,7 +65,7 @@ namespace StockManagementSystem
             {
                 addOrUpdate = "Add";
                 UserStatusSave(company);
-                MessageBox.Show("Saved Successfull");
+                MessageBox.Show("Saved Successfully");
                 ShowAllData();
             }
             else
