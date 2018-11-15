@@ -79,7 +79,7 @@ namespace StockManagementSystem
             }
             else
             {
-                MessageBox.Show("Must fill Item");
+                MessageBox.Show("Must have to fill Item");
             }
         }
 
@@ -111,11 +111,11 @@ namespace StockManagementSystem
             if (isSaved > 0)
             {
                 UserStatusSave(item);
-                MessageBox.Show("Saved Successfull");
+                MessageBox.Show("Saved Successfully");
             }
             else
             {
-                MessageBox.Show("Something Wrong into Database");
+                MessageBox.Show("Something Wrong into the Database");
             }
         }
         private void UserStatusSave(Item item)
