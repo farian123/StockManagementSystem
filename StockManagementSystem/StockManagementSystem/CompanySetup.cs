@@ -49,7 +49,7 @@ namespace StockManagementSystem
             bool check = companyManage.CheckDuplecateCompany(company);
             if (!check)
             {
-                MessageBox.Show("Already Exists This Company");
+                MessageBox.Show("Already Exists this Company");
             }
             else
             {
@@ -144,7 +144,7 @@ namespace StockManagementSystem
                     }
                     else
                     {
-                        MessageBox.Show("Something Wrong into Database");
+                        MessageBox.Show("Something Wrong  into Database");
                     }
                 }
             }
